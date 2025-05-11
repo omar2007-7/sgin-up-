@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="styles/nav.css" />
+        <link rel="stylesheet" href="styles/start.css" />
+    </head>
+    <body
+        onload="document.querySelector('#login_div').classList.add('appear_login_page');
+              document.querySelector('#info_inputs').classList.add('appear_login_page')"
+    >
+        <%- include("partials/nav.ejs") %>
+        <div id="login_up_div">
+            <div id="login_div">
+                <h1 id="login_head">Login</h1>
+                <form id="inputs" action="/start"  method="post">
+                    <label for="text">Username:</label>
+                    <input id="user_input" type="text" name="user" required />
+                    <label for="text">Email:</label>
+                    <input id="email_input" type="text" name="email" required />
+                    <label for="text">Password:</label>
+                    <input id="password_input" type="text" name="password" required />
+                    <div id="buttons_login">
+                        <input type="submit" class="buttons" id="save_button" value="save" ></input>
+                        <input type="reset" class="buttons" id="Delete_button" value="delete">
+                
+                        </input>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="info">
+            <div id="info_inputs">
+                <h5 style="grid-area: h51" class="names">username</h5>
+                <h6 style="grid-area: h61" id="user"><%= user %></h6>
+                <h5 style="grid-area: h52" class="names">email</h5>
+                <h6 style="grid-area: h62" id="email"><%= email %></h6>
+                <h5 style="grid-area: h53" class="names">password</h5>
+                <h6 style="grid-area: h63" id="password"><%= password %></h6>
+                <img
+                    style="grid-area: image"
+                    id="image"
+                    src="assets/images/pexels-goumbik-1420701.jpg"
+                    alt="image"
+                />
+                <div id="image_change" style="grid-area: add_image">
+                    <button id="add">add</button>
+                    <button id="remove">remove</button>
+                </div>
+            </div>
+        </div>
+        <script src="other/jquery.min.js"></script>
+        <script src="scripts/script.js"></script>
+        <script src="scripts/start.js"></script>
+    </body>
+</html>

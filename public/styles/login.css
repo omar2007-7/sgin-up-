@@ -1,0 +1,122 @@
+:root {
+    --box1: 4px 4px 10px 6px rgba(0, 0, 0, 0.1);
+    --box2: 4px 4px 10px 6px rgba(0, 0, 0, 0.1);
+    --back1: rgba(0, 200, 0, 0.3);
+    --back2: rgba(200, 0, 0, 0.3);
+    --back3: rgba(0, 0, 200, 0.3);
+    --back4: rgba(177, 172, 172, 0.9);
+    --back11: rgba(0, 200, 200, 0.3);
+    --back21: rgba(200, 0, 200, 0.3);
+    --color1: rgb(0, 0, 0);
+    --color2: rgb(255, 255, 255);
+    --color3: rgba(16, 160, 52, 0.4);
+}
+body {
+    background-color: var(--back4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "user ..."
+        "email login"
+        "password reset";
+    gap: 1rem 4rem;
+}
+input {
+    outline: none;
+    border: 0;
+    background-color: transparent;
+}
+.entrys {
+    box-shadow: var(--box1);
+    height: 2rem;
+    width: 15rem;
+    border-radius: 1rem 2rem;
+    padding-left: 20px;
+}
+.entrys:focus {
+    transition: 1s background-color ease;
+    background-color: var(--back3);
+    border-bottom: 2px solid var(--color3);
+}
+.buttons {
+    box-shadow: var(--box2);
+    border-radius: 1rem 2rem;
+    font-weight: bolder;
+}
+.buttons:hover {
+    cursor: pointer;
+    transition: 0.7s transform ease;
+    transform: scale(1.1);
+}
+.buttons.l:hover {
+    transition: 0.7s background-color ease;
+    background-color: var(--back1);
+}
+.buttons.r:hover {
+    transition: 0.7s background-color ease;
+    background-color: var(--back2);
+}
+.buttons.l:active {
+    transition: 0.7s background-color ease;
+    background-color: var(--back11);
+}
+.buttons.r:active {
+    transition: 0.7s background-color ease;
+    background-color: var(--back21);
+}
+div > h1 {
+    font-family: serif;
+    font-weight: bolder;
+    color: var(--color1);
+}
+h1:hover {
+    animation: login 1s both infinite;
+}
+@keyframes login {
+    0% {
+        color: var(--color1);
+        transform: scale(1);
+    }
+    50% {
+        color: var(--color2);
+        transform: scale(1.1);
+    }
+    100% {
+        color: var(--color1);
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "user user"
+            "email email"
+            "password password "
+            "reset login";
+        gap: 2rem;
+    }
+    .buttons {
+        height: 2rem;
+    }
+}

@@ -1,0 +1,203 @@
+:root {
+    --input_back: rgba(209, 204, 204, 0.2);
+    --back_1: rgba(148, 151, 149, 0.7);
+    --box_shadow_1: 1px 1px 4px 1px rgba(0, 0, 0, 0.5);
+    --box_shadow_2: 1px 1px 4px 2px rgba(37, 37, 36, 0.7);
+    --box_shadow_3: 1px 1px 4px 3px rgba(138, 1, 1, 0.7);
+    --box_shadow_4: 1px 1px 4px 3px rgba(37, 104, 23, 0.7);
+    --border_1: rgba(51, 7, 92, 0.7);
+    --border_2: rgba(207, 10, 10, 0.5);
+}
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#login_div {
+    /* border: 1px solid; */
+    height: 30rem;
+    width: 70%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-radius: 2rem;
+    box-shadow: var(--box_shadow_1);
+    opacity: 0;
+}
+
+#login_up_div {
+    /* border: 2px solid; */
+    /* margin: 2rem; */
+    height: 35rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+#inputs {
+    /* border: 2px solid red; */
+    display: grid;
+    grid-template-columns: 20rem;
+    grid-template-rows: repeat(7, 1fr);
+    row-gap: 0rem;
+}
+#inputs > label {
+    font-family: sans-serif;
+    font-weight: 600;
+    position: relative;
+    top: 1rem;
+    font-size: 0.9rem;
+    left: 0.4rem;
+}
+#inputs > input {
+    background-color: var(--input_back);
+    border: 0;
+    border-radius: 0.4rem;
+    box-shadow: var(--box_shadow_1);
+    height: 2rem;
+    outline: none;
+    cursor: pointer;
+    padding-left: 6pt;
+}
+#inputs > input:focus {
+    border: 3px solid var(--border_1);
+    border-top: 0;
+    border-bottom: 2px solid var(--border_1);
+    box-shadow: 0;
+    border-right: 0;
+}
+#buttons_login {
+    /* border: 2px solid; */
+    height: 2rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+#buttons_login .buttons {
+    width: 6rem;
+    background-color: var(--input_back);
+    border: 0;
+    box-shadow: var(--box_shadow_1);
+    border-radius: 1rem;
+    font-family: sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+#buttons_login .buttons:hover {
+    box-shadow: var(--box_shadow_2);
+    transform: translateY(-1px);
+}
+
+#buttons_login .buttons:active {
+    box-shadow: var(--box_shadow_3);
+}
+#buttons_login .buttons#save_button:active {
+    box-shadow: var(--box_shadow_4);
+}
+
+@media (max-width: 720px) {
+    nav {
+        display: inline-flex;
+        z-index: 1;
+        background-color: var(--navbar_mobile);
+        position: fixed;
+    }
+    #inputs {
+        /* border: 2px solid red; */
+        display: grid;
+        grid-template-columns: 15rem;
+        grid-template-rows: repeat(6, 1fr);
+        row-gap: 0.4rem;
+    }
+    #login_div {
+        margin-top: 5rem;
+        height: 25rem;
+        width: 100%;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    #inputs input {
+        width: 90%;
+        justify-self: center;
+    }
+    #inputs #buttons_login {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+.appear_login_page {
+    animation: 2s appear_login_page forwards;
+}
+@keyframes appear_login_page {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#info {
+    /* border: 1px solid; */
+    height: 25rem;
+}
+#info_inputs {
+    border: 1px solid;
+    margin: 2rem;
+    height: 20rem;
+    display: grid;
+    padding: 2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "h51 h61 image"
+        "h52 h62 image"
+        "h53 h63 add_image";
+    border-radius: 2rem;
+    box-shadow: var(--box_shadow_1);
+    opacity: 0;
+}
+#image {
+    aspect-ratio: 1/1;
+    width: 12rem;
+    border: 1px solid;
+    border-radius: 50%;
+    box-shadow: var(--box_shadow_2);
+    transition: transform 5s ease-in-out;
+    transform: rotate(0deg);
+}
+#image:hover {
+    transform: rotate(360deg);
+}
+
+#image_change {
+    display: flex;
+    justify-content: start;
+    gap: 2rem;
+}
+#image_change > button {
+    width: 5rem;
+    background-color: transparent;
+    border: 0;
+    box-shadow: var(--box_shadow_1);
+    border-radius: 2rem;
+    font-family: sans-serif;
+    font-weight: 800;
+}
+#image_change > button:hover {
+    background-color: rgb(42, 230, 83, 0.2);
+    transform: scale(1.08);
+}

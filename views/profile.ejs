@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="styles/nav.css" />
+        <link rel="stylesheet" href="styles/profile.css" />
+    </head>
+    <body
+        onload="document.querySelector('#info_div').classList.add('appear_profile_page');"
+    >
+        <%- include("partials/nav.ejs") %>
+        <div id="info_div">
+            <details id="details_top" open>
+                <summary id="summary_info">User information</summary>
+                <div id="info_list">
+                    <div id="info_names_col">
+                        <h5 class="info_names">username:</h5>
+                        <h6 class="user_info_col"><%= user %></h6>
+                        <h5 class="info_names">email:</h5>
+                        <h6 class="user_info_col"><%= email %></h6>
+                        <h5 class="info_names">password:</h5>
+                        <h6 class="user_info_col"><%= password %></h6>
+                    </div>
+                    <img src="assets/images/note.jpg" alt="userimage" />
+                </div>
+            </details>
+        </div>
+        <script src="scripts/script.js"></script>
+        <script src="scripts/profile.js"></script>
+    </body>
+</html>

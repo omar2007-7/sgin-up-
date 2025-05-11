@@ -1,0 +1,187 @@
+:root{
+    --shadow_image: 12px 12px 12px 10px rgba(2,0,0,0.2);
+    --welcome_color:linear-gradient(to right,rgb(61, 61, 52),rgba(29, 29, 26, 0.9),rgba(27, 27, 24, 0.9));
+    --p_color:linear-gradient(to right,rgb(3, 3, 2),rgba(32, 32, 13, 0.9),rgba(27, 27, 24, 0.9));
+    --navbar_mobile:rgba(170, 164, 164, 0.9);
+    --welcome_color_hover:linear-gradient(to right,rgb(119, 119, 121),rgb(163, 163, 168));
+}
+
+#info_web{
+    /* border: 2px solid; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: start;
+    align-items: start;
+    top: 5rem;
+
+}
+#info_web >h1{
+    background-image: var(--welcome_color);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 5rem;
+    font-family: serif;
+    font-weight: bolder;
+    position: relative;
+    left: -5px;
+}
+#info_web >h2{
+    background-image: var(--welcome_color);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.5rem;
+    font-family: serif;
+    font-weight: bolder;
+}
+#info_web >p{
+    background-image: var(--p_color);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1rem;
+    font-family: sans-serif;
+    font-weight:600;
+}
+
+
+
+
+
+
+
+#image_flower{
+    aspect-ratio: 3/5;
+    width: max(15rem,20%);
+    /* border: 2px solid; */
+    border-radius: 20px;
+    box-shadow: var(--shadow_image);
+    z-index:-2 ;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    
+}
+.image_animate{
+    animation:  7s image_animation  linear infinite;
+}
+#flower_div{
+    position: relative;
+    /* background-color: aqua; */
+    /* border: 2px solid; */
+    display: grid;
+    grid-template-columns: 60% 40%;
+    width: 100%;
+    height: 30rem;
+    z-index: -2;
+    opacity: 0;
+}
+@keyframes image_animation {
+    0%{
+        transform: translateY(-10px);
+    }
+    25%{
+        transform: translateY(10px);
+
+    }
+    50%{
+        transform: translateY(-10px);
+
+    }
+    75%{
+        transform: translateY(10px);
+
+    }
+    100%{
+        transform: translateY(-10px);
+    }
+}
+
+
+@media (max-width:720px){
+    nav{
+        display: inline-flex;
+        z-index: 1;
+        background-color: var(--navbar_mobile);
+
+        /* position: absolute; */
+    }
+    #flower_div{
+        display: flex;
+        flex-direction: column;
+        /* border: 1px solid; */
+        height: 21rem;
+        
+    }
+    #image_flower{
+        /* border: 1px solid;
+        position: relative;
+        width: 10rem;
+        left: 9rem;
+        top: -4rem; */
+        display: none;
+
+    }
+    #info_web{
+        /* border: 2px solid;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        justify-content: start;
+        align-items: start;
+        top: 0rem;
+        height:100em ; */
+        display: none;
+
+    
+    }
+    #info_web >h1{
+        /* background-image: var(--welcome_color);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 2em;
+        font-family: serif;
+        font-weight: bolder;
+        position: relative;
+        left: 4.4em; */
+        display: none;
+    }
+    #info_web >h2{
+        /* background-image: var(--welcome_color);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 0.9em;
+        font-family: sans-serif;
+        font-weight: bolder;
+        position: relative;
+        top: 5rem; */
+        display: none;
+    }
+    #info_web >p{
+        /* background-image: var(--p_color);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 1rem;
+        font-family: sans-serif;
+        font-weight:600; */
+        display: none;
+    }
+}
+
+.appear_home_page{
+    animation: 2s appear_home_page forwards;
+}
+@keyframes appear_home_page {
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+
+    }
+}

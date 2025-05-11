@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>website</title>
+        <!-- <link rel="stylesheet" href="../public/styles/login.css" /> -->
+        <link rel="stylesheet" href="styles/login.css" />
+    </head>
+    <body>
+        <div>
+            <h1>Get started</h1>
+            <form action="/home" method="post">
+                <input
+                    id="user"
+                    class="entrys"
+                    type="text"
+                    name="user"
+                    placeholder="user"
+                    style="grid-area: user"
+                />
+                <input
+                    class="entrys"
+                    type="text"
+                    name="email"
+                    placeholder="email"
+                    style="grid-area: email"
+                    required
+                />
+                <input
+                    class="entrys"
+                    type="text"
+                    name="password"
+                    placeholder="password"
+                    style="grid-area: password"
+                    required
+                />
+                <input
+                    class="buttons l"
+                    type="submit"
+                    value="login"
+                    style="grid-area: login"
+                    required
+                />
+                <input
+                    class="buttons r"
+                    type="reset"
+                    value="reset"
+                    style="grid-area: reset"
+                />
+            </form>
+        </div>
+
+    </body>
+</html>
