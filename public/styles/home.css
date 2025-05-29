@@ -7,7 +7,6 @@
 }
 
 #info_web{
-    /* border: 2px solid; */
     position: relative;
     display: flex;
     flex-direction: column;
@@ -52,16 +51,7 @@
 
 
 #image_flower{
-    aspect-ratio: 3/5;
-    width: max(15rem,20%);
-    /* border: 2px solid; */
-    border-radius: 20px;
-    box-shadow: var(--shadow_image);
-    z-index:-2 ;
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
-    
+ display: none;
 }
 .image_animate{
     animation:  7s image_animation  linear infinite;
