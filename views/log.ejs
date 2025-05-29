@@ -5,9 +5,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>website</title>
         <link rel="stylesheet" href="styles/login.css" />
-           <link rel="stylesheet" href="styles/all.css" />
+        <link rel="stylesheet" href="styles/all.css" />
     </head>
     <body>
+        <div class="search-bar-container active">
+            <img
+                src="assets/icons/search.svg"
+                alt="magnifier"
+                class="magnifier"
+            />
+            <input type="text" class="inputc" placeholder="Search ..." />
+            <img src="assets/icons/user.svg" alt="mic-icon" class="mic-icon" />
+        </div>
         <div id="container">
             <h1>Get started</h1>
             <form action="/home" method="post">
@@ -50,6 +59,6 @@
                 />
             </form>
         </div>
-
+        <script src="scripts/log.js"></script>
     </body>
 </html>
