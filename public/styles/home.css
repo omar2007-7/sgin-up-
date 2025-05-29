@@ -2,25 +2,24 @@
     --shadow_image: 12px 12px 12px 10px rgba(2, 0, 0, 0.2);
     --welcome_color: linear-gradient(
         to right,
-        rgb(61, 61, 52),
-        rgba(29, 29, 26, 0.9),
-        rgba(27, 27, 24, 0.9)
+        rgb(218, 218, 213),
+        rgba(182, 182, 201, 0.9),
+        rgba(139, 139, 139, 0.9)
     );
     --p_color: linear-gradient(
         to right,
-        rgb(3, 3, 2),
-        rgba(32, 32, 13, 0.9),
-        rgba(27, 27, 24, 0.9)
+        rgb(206, 193, 193),
+        rgba(196, 196, 196, 0.9),
+        rgba(95, 95, 95, 0.9)
     );
-    --navbar_mobile: rgba(170, 164, 164, 0.9);
     --welcome_color_hover: linear-gradient(
         to right,
-        rgb(119, 119, 121),
-        rgb(163, 163, 168)
+        rgb(234, 234, 238),
+        rgb(111, 111, 119)
     );
 }
 
-#info_web {
+#info_web{
     position: relative;
     display: flex;
     flex-direction: column;
@@ -58,21 +57,15 @@
     -webkit-text-fill-color: transparent;
     font-size: 1rem;
     font-family: sans-serif;
-    font-weight: 600;
-     transition: 1s all;
+    font-weight:600;
 }
 
-#image_flower {
-    aspect-ratio: 3/5;
-    width: max(15rem, 20%);
-    border-radius: 20px;
-    box-shadow: var(--shadow_image);
-    z-index: -2;
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
-     transition: 1s all;
-}
+
+
+
+
+
+
 
 #flower_div {
     position: relative;
@@ -95,7 +88,6 @@
     nav {
         display: inline-flex;
         z-index: 1;
-        background-color: var(--navbar_mobile);
         position: fixed;
     }
     #flower_div {
@@ -109,14 +101,7 @@
         width: 100%;
         gap: 2rem;
     }
-    #image_flower {
 
-
-    z-index:0 ;
-    position: relative;
-    right: unset;
-    top: unset;
-    }
 
     #info_web > h1 {
         font-size: 3rem;

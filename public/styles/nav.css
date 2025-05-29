@@ -1,12 +1,9 @@
 :root{
-    --body_color:rgb(175, 174, 174);
-    --text_navbar:rgb(15, 13, 13);
-    /* --navbar:rgba(255, 246, 246, 0.1); */
-    --navbar:rgb(190, 184, 184);
-    --navbar_mobile:rgba(170, 164, 164, 0.8);
-    --navbar_border:rgb(196, 165, 165,0.1);
-    --hover_button_navbar:rgba(53, 49, 49, 0.1);
-    --login_back:rgba(199, 199, 199, 0.1);
+    --text_navbar:#d1dae0c5;
+    --navbar: #243642;
+    --navbar_mobile : #243642;
+    --hover_button_navbar:#1331509a;
+    --login_back:#324857d7;
 }
 *{
     margin: 0;
@@ -16,16 +13,12 @@
 html{
     font-family: sans-serif;
 }
-body{
-    background-color: var(--body_color);
-}
+
 nav{
-    border-bottom: 2px solid var(--navbar_border);
     background-color: var(--navbar);
     height: 3rem;
     position: relative;
     box-shadow: 1px 5px 13px 1px rgba(14, 13, 13, 0.2);
-    border-radius: 20rem;
 }
 nav ul{
     list-style: none;
@@ -57,11 +50,7 @@ nav ul a.login_link{
     width: 8rem;
 }
 nav ul a:hover{
-    /* transition: 0.4s background-color linear, 0.5s border-bottom linear; */
     background-color: var(--hover_button_navbar) ;
-    border: 1px solid rgb(206, 206, 207) ;
-    border-top: 0;
-    border-radius: 20rem;
     
 }
 .home_li{
@@ -81,14 +70,7 @@ nav ul a:hover{
 .profile_link:hover, .store_link:hover{
     border-radius: 0;
 }
-.home_link:hover{
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
-}
-.login_link:hover{
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
-}
+
 .button_show{
     order: 4;
     height: 3rem;
@@ -227,8 +209,7 @@ nav ul a:hover{
     nav ul a:hover{
         border-radius: 0;
         border: 0;
-        border-bottom: 1px solid rgb(206, 206, 207) ;
-        border-right: 2px solid rgb(206, 206, 207) ;
+        border-right: 1px solid rgb(206, 206, 207) ;
         
     }
     nav ul a.login_link{
